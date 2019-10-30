@@ -1,6 +1,8 @@
 import React from 'react';
 import logo from './logo.svg';
+import { Button } from 'antd';
 import './App.css';
+import 'antd/dist/antd.css'; // or 'antd/dist/antd.less'
 
 const App: React.FC = () => {
   return (
@@ -18,6 +20,7 @@ const App: React.FC = () => {
         >
           Learn React
         </a>
+        <Button type="danger"> This is AntD Button </Button>
       </header>
     </div>
   );
