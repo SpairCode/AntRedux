@@ -20,7 +20,7 @@ const App: React.FC = () => {
         >
           Learn React
         </a>
-        <Button type="danger"> This is AntD Buttons </Button>
+        <Button type="danger"> This is AntD Button </Button>
       </header>
     </div>
   );
