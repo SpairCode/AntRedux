@@ -20,3 +20,9 @@
 .App-link {
   color: #09d3ac;
 }
+
+.text-style {
+  color: #fff;
+  font-size: 160px;
+  text-shadow: 1px 1px 1px #ccc,1px 1px 1px #ccc,1px 1px 1px #ccc,1px 1px 1px #ccc;
+}
