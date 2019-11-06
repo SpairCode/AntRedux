@@ -9,7 +9,30 @@ const store = createStore(counter)
 
 class App extends React.Component {
 
-  render () {
+  Con = () => {
+    setInterval(() => {
+      console.log('state', store.getState())
+    }, 1000)
+  }
+
+  componentDidMount () {
+    this.Con()
+  }
+
+  unsubscribe = () => {
+    store.subscribe(() =>
+      console.log(store.getState())
+    )
+  }
+    
+
+  // 提供 getState() 方法获取 state；
+  // 提供 dispatch(action) 方法更新 state；
+  // 通过 subscribe(listener) 注册监听器;
+  // 通过 subscribe(listener) 返回的函数注销监听器。
+
+  render () { 
+    console.log(store)
     return (
       <div className="App">
         <header className="App-header">
