@@ -9,22 +9,22 @@ const store = createStore(counter)
 
 class App extends React.Component {
 
-  Con = () => {
-    setInterval(() => {
-      console.log('state', store.getState())
-    }, 1000)
-  }
-
-  componentDidMount () {
-    this.Con()
+  state = {
+    number: 0
   }
 
   unsubscribe = () => {
-    store.subscribe(() =>
-      console.log(store.getState())
-    )
+    store.subscribe(() => {
+      console.log('unsubscribe', store.getState())
+      this.setState({
+        number: store.getState()
+      })
+    })
   }
-    
+
+  componentDidMount () {
+    this.unsubscribe()
+  }
 
   // 提供 getState() 方法获取 state；
   // 提供 dispatch(action) 方法更新 state；
@@ -32,11 +32,11 @@ class App extends React.Component {
   // 通过 subscribe(listener) 返回的函数注销监听器。
 
   render () { 
-    console.log(store)
+    const { number } = this.state
     return (
       <div className="App">
         <header className="App-header">
-          <h1 className="text-style">{ store.getState() }</h1>
+          <h1 className="text-style">{ number }</h1>
           <div>
             <Button onClick={ () => store.dispatch({ type: 'ADD' }) } style={{ margin: 10 }} type='primary' size='large'>Add</Button>
             <Button onClick={ () => store.dispatch({ type: 'CUT' }) } style={{ margin: 10 }} type='danger' size='large'>Cut</Button>
