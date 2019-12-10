@@ -15,6 +15,7 @@ class TodoList extends React.Component {
   }
 
   changeInputValue = (e) => {
+    console.log('e', e.target.value)
     const action = {
       type: 'changeInput',
       value: e.target.value
@@ -25,7 +26,7 @@ class TodoList extends React.Component {
   addItem = () => {
     const action = {
       type: 'addItem',
-      value: this.state.inputValue
+      value: this.state.value
     }
     store.dispatch(action)
   }
@@ -39,11 +40,11 @@ class TodoList extends React.Component {
   }
 
   render () {
-    const { inputValue, list }  = this.state
+    const { inputValue, list, value }  = this.state
     return (
       <div style={{ padding: 10 }}>
         <div>
-          <Input onChange={ this.changeInputValue.bind() } style={{ width: 250, margin: '0px 10px 0px 0px' }} placeholder={ inputValue } />
+          <Input onChange={ this.changeInputValue.bind() } style={{ width: 250, margin: '0px 10px 0px 0px' }} value={ value } placeholder={ inputValue } />
           <Button onClick={ this.addItem.bind() } type="primary"> Add </Button>
         </div>
         <div style={{ margin: '10px 0px' }}>
