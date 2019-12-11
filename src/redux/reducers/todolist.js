@@ -1,4 +1,4 @@
-// import { createStore } from 'redux';
+import {CHANGE_INPUT,ADD_ITEM,DELETE_ITEM} from '../actions/actionTypes'
 
 const defaultState = {
   inputValue: 'Input Something',
@@ -14,20 +14,20 @@ const defaultState = {
 
 export default (state = defaultState, action) => {
   // Reducer里面只能接收state, 不能改变state
-  if (action.type === 'changeInput') {
+  if (action.type === CHANGE_INPUT) {
     let newState = JSON.parse(JSON.stringify(state))
     newState.value = action.value
     return newState
   }
-  if (action.type === 'addItem') {
+  if (action.type === ADD_ITEM) {
     let newStates = JSON.parse(JSON.stringify(state)) 
     newStates.list.push(newStates.value)  //push新的内容到列表中去
     newStates.value = ''
     return newStates
   }
-  if (action.type === 'deleteItem') {
+  if (action.type === DELETE_ITEM) {
     let newStates = JSON.parse(JSON.stringify(state)) 
-    newStates.list.splice(action.value, 1)  //push新的内容到列表中去
+    newStates.list.splice(action.index, 1)  //push新的内容到列表中去
     return newStates
   }
   return state

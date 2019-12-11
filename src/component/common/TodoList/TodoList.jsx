@@ -1,6 +1,8 @@
 import React from 'react';
 import { Input, List, Button, Row, Col } from 'antd';
 import store from '../../../redux/store/store';
+// import { CHANGE_INPUT , ADD_ITEM , DELETE_ITEM } from '../../../redux/actions/actionTypes'
+import { changInputAction, addItemAction, deleteItemAction } from '../../../redux/actions/actionCreatores'
 
 class TodoList extends React.Component {
 
@@ -15,27 +17,17 @@ class TodoList extends React.Component {
   }
 
   changeInputValue = (e) => {
-    console.log('e', e.target.value)
-    const action = {
-      type: 'changeInput',
-      value: e.target.value
-    }
+    const action = changInputAction(e.target.value)
     store.dispatch(action)
   }
 
   addItem = () => {
-    const action = {
-      type: 'addItem',
-      value: this.state.value
-    }
+    const action = addItemAction()
     store.dispatch(action)
   }
 
   deleteItem = (index) => {
-    const action = {
-      type: 'deleteItem',
-      value: index
-    }
+    const action = deleteItemAction(index)
     store.dispatch(action)
   }
 
