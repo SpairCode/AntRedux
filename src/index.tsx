@@ -4,9 +4,9 @@ import './index.css';
 // import App from './App';
 import 'antd/dist/antd.css';
 import * as serviceWorker from './serviceWorker';
-import Todolist from '../src/component/common/TodoList/TodoList'
+import Home from '../src/component/Home/Home';
 
-ReactDOM.render(<Todolist />, document.getElementById('root'));
+ReactDOM.render(<Home />, document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.

@@ -8,12 +8,15 @@
     "@types/react": "16.9.11",
     "@types/react-dom": "16.9.3",
     "antd": "^3.24.3",
+    "less": "^3.10.3",
+    "less-loader": "^5.0.0",
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
     "react-redux": "^7.1.1",
     "react-scripts": "3.2.0",
     "redux": "^4.0.4",
     "redux-devtools": "^3.5.0",
+    "redux-thunk": "^2.3.0",
     "typescript": "3.6.4",
     "ws": "^7.2.0"
   },
@@ -37,5 +40,10 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "css-loader": "^3.3.2",
+    "style-loader": "^1.0.1",
+    "stylus-loader": "^3.0.2"
   }
 }
