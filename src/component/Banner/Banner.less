@@ -1,4 +1,77 @@
 .bannerBox {
   width: 100vw;
   height: calc(100vh - 80px);
+  background-color: rgba(235, 238, 242, 1);
+}
+
+.imgBox {
+  position: relative;
+  padding: 8px 0px 8px 8px;
+  border-radius: 20px 0px 0px 20px;
+  min-width: 100%;
+  height: 626px;
+  background-color: #fff;
+}
+
+.imgBox::after {
+  content: '';
+  position: absolute;
+  top: 29px;
+  left: -6px;
+  display: block;
+  border-radius: 5px 0px 0px 5px;
+  width: 6px;
+  height: 37px;
+  background-color: #fff;
+}
+
+.imgBox::before {
+  content: '';
+  position: absolute;
+  top: -5px;
+  left: 30px;
+  border-radius: 5px;
+  width: 30px;
+  height: 5px;
+  background-color: #fff;
+}
+
+.img {
+  border-radius: 20px 0px 0px 20px;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url('./../../assets/Screen.png');
+}
+
+.leftTextBox {
+  margin-top: 39px;
+  margin-left: 165px;
+  width: 445px;
+  height: 433px;
+  color: #000;
+  // background-color: #ccc;
+}
+
+.leftTextBox > h1 {
+  font-weight: 500;
+  font-size: 70px;
+  line-height: 80px;
+}
+
+.leftTextBox > span {
+  display: inline-block;
+  margin: 20px 0px 40px 0px;
+  width: 60px;
+  height: 4px;
+  background-color: #000;
+}
+
+.leftTextBox > p {
+  width: 285px;
+  height: 72px;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 24px;
 }

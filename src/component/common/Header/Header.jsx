@@ -7,11 +7,14 @@ class Header extends React.Component {
     return (
       <div className={styles.header}>
         <Row>
-          <Col span={3}> Fan </Col>
+          <Col className={styles.headerLogo} span={3}> Fan </Col>
           <Col span={3}></Col>
           <Col span={6}></Col>
           <Col span={6}></Col>
-          <Col span={6}></Col>
+          <Col span={3}></Col>
+          <Col className={styles.headerLogin} span={3}>
+            <span> Login </span>
+          </Col>
         </Row>
       </div>
     )
