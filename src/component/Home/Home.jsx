@@ -14,7 +14,7 @@ class Home extends React.Component {
         {/* 头部 */}
         <Header/>
         <Banner/>
-        <LazyLoad offset={100}>
+        <LazyLoad offset={50}>
           <List/>
         </LazyLoad>
         <Footer/>

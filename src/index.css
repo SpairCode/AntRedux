@@ -13,3 +13,12 @@ code {
     monospace;
 }
 
+@font-face {
+  font-family: 'iconfont';  /* project id 1569758 */
+  src: url('//at.alicdn.com/t/font_1569758_ohlsom7oaxf.eot');
+  src: url('//at.alicdn.com/t/font_1569758_ohlsom7oaxf.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_1569758_ohlsom7oaxf.woff2') format('woff2'),
+  url('//at.alicdn.com/t/font_1569758_ohlsom7oaxf.woff') format('woff'),
+  url('//at.alicdn.com/t/font_1569758_ohlsom7oaxf.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_1569758_ohlsom7oaxf.svg#iconfont') format('svg');
+}

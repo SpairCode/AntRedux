@@ -5,6 +5,7 @@ import './animate.min.css';
 // import App from './App';
 import 'antd/dist/antd.css';
 import 'nprogress/nprogress.css';
+import 'normalize.css/normalize.css';
 import * as serviceWorker from './serviceWorker';
 import Home from '../src/component/Home/Home';
 
