@@ -17,7 +17,9 @@ class Home extends React.Component {
         <LazyLoad offset={50}>
           <List/>
         </LazyLoad>
-        <Footer/>
+        <LazyLoad offset={50}>
+          <Footer/>
+        </LazyLoad>
       </div>
     )
   }

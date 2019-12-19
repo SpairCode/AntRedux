@@ -10,7 +10,7 @@ class Footer extends React.Component {
           <Row className={styles.leftLogo}>
             <Col span={12}>
               <div className={styles.leftTips}>
-                <div className={styles.logo}></div>
+                <div className={`${styles.logo} animated fadeInLeftBig`}></div>
                 <p>It was a humorously perilous business for both of us. For, before we proceed further.</p>
               </div>
             </Col>
