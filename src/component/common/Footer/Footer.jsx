@@ -7,14 +7,14 @@ class Footer extends React.Component {
     return (
       <div className={styles.footer}>
         <div className={styles.contentBox}>
-          <Row className={styles.leftLogo}>
-            <Col span={12}>
+          <div>
+            <div>
               <div className={styles.leftTips}>
                 <div className={`${styles.logo} animated fadeInLeftBig`}></div>
-                <p>It was a humorously perilous business for both of us. For, before we proceed further.</p>
+                <p>It was a humorously perilous business for both of us. For, before we   proceedfurther.</p>
               </div>
-            </Col>
-            <Col span={12}>
+            </div>
+            <div>
               <div className={styles.list}>
                 <ul>
                   <li>
@@ -45,8 +45,8 @@ class Footer extends React.Component {
                   </li>
                 </ul>
               </div>
-            </Col>
-          </Row>
+            </div>
+          </div>
         </div>
         <div className={styles.bottomBox}>
           <Row className={styles.bottomRow}>
